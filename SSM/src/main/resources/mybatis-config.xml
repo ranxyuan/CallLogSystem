@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases >
+        <typeAlias type="com.ran.ssm.domain.User" alias="_User"/>
+        <typeAlias type="com.ran.ssm.domain.Order" alias="_Order"/>
+        <typeAlias type="com.ran.ssm.domain.Item" alias="_Item"/>
+        <typeAlias type="com.ran.ssm.domain.Person" alias="_Person"/>
+    </typeAliases>
+
+    <!--引入映射文件-->
+    <mappers>
+        <mapper resource="OrderMapper.xml"/>
+        <mapper resource="UserMapper.xml"/>
+        <mapper resource="ItemMapper.xml"/>
+        <mapper resource="PersonMapper.xml"/>
+    </mappers>
+</configuration>

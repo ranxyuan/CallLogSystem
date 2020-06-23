@@ -1,0 +1,45 @@
+body{
+    border : 1px solid blue ;
+    margin: 0px;
+    /*background-color: aquamarine;*/
+}
+
+table {
+    border: 1px solid cadetblue;
+    border-collapse: collapse;
+    width: 400px;
+    margin: 50px auto;
+}
+
+table td {
+    text-align: center;
+    height: 45px;
+}
+/*对偶数个孩子设置背景色*/
+table tr:nth-child(even) {
+    background-color: beige;
+}
+/*第一个孩子设置颜色（第一行）*/
+table tr:first-child {
+    background-color: darkcyan;
+    color: white;
+}
+
+form input[type="submit"]{
+    border: 1px solid blue;
+    background-color: white;
+    width: 150px;
+    height: 35px;
+}
+
+form input[type="text"] , form input[type="password"]{
+    border: 1px solid blue;
+    width: 240px;
+    height: 30px;
+    font-size: 16px;
+}
+
+form table td{
+    background-color: white;
+    color: black;
+}

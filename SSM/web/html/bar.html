@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bar.html</title>
+    <script src="../js/jquery-3.2.0.min.js"></script>
+    <script src="../js/echarts.js"></script>
+    <script>
+        $(function () {
+            //基于准备好的div,来初始化echarts实例
+            var myChart = echarts.init(document.getElementById('main'));
+            //指定图标的配置项数据（json格式的数据对象）
+            var option = {
+                title: {
+                    text: 'xxxx2016年度各月份通话次数'
+                },
+                tooltip: {},
+                legend: {
+                    data: ['通话次数']
+                },
+                xAxis: {
+                    data: ["1月份", "2月份", "3月份"]
+                },
+                yAxis: {},
+                series: [{
+                    name: '通话次数',
+                    type: 'bar',
+                    data: [100, 300, 280]
+                }]
+            };
+            //将数据添加到echart中
+            myChart.setOption(option);
+        })
+    </script>
+</head>
+<body>
+<div id="main" style="border:1px solid blue;width:600px;height:400px;">
+</div>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="persons">
+    <select id="selectAll" resultType="_Person">
+      select * from persons
+    </select>
+    <select id="selectNameByPhone" resultType="string" parameterType="string">
+      select name from persons where phone = #{phone}
+    </select>
+    <insert id="insert" parameterType="_Person">
+        insert into persons(name , phone) values(#{name},#{phone})
+    </insert>
+</mapper>
